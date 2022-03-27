@@ -6,7 +6,7 @@ ReactDOM.render(
 
 
 <App />,
-
+<div>sdhjdfhjskd</div>,
   
   
   document.getElementById('root')

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Counter from "./components/counter";
+import React from 'react';
+// import Counter from "./components/counter";
 
 function App() {
 
@@ -7,15 +7,21 @@ function App() {
   const [value, setValue] = useState( 'текст в инпуте');
 return (
     <div className="App">
-    
-<Counter />
+      <div className="post">
+        <div className=".post__content">
+            <strong>1. Javascript</strong>
+            <div>
+              something on here
+            </div>
+        </div>
+        <div className="post__btns">
+          <button>
+            remove
+          </button>
+        </div>
 
-<Counter />
-<Counter />
+     </div>
 
-<Counter />
-<Counter />
-<Counter />
     </div>
 );
 }
