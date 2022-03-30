@@ -7,35 +7,44 @@ constructor(props) {
   super(props)
 
   this.state = {
-    visibility: false
+    count:0
   };
-  this.handleClick = this.handleClick.bind(this);
+  this.increment = this.increment.bind(this);
+  this.decrement = this.decrement.bind(this);
+  this.reset = this.reset.bind(this);
 }
-handleClick(){
+increment(){
   this.setState(state => ({
-    visibility: !state.visibility
-  }));  
+    count:state.count + 1
+  })); 
+} 
+decrement(){
+    this.setState(state => ({
+      count:state.count - 1
+    })); 
+  }
+reset(){
+  this.setState({   
+  count:0
+  })
 }
   
+
+  
   render() {
-     if (this.state.visibility){
-    return (
-        
-      <div>
-          <h1>Hello, {this.state.name}</h1>
-          <button onClick={this.handleClick}>Button</button>
-    </div>
-    );
-  }else {
-    return (
-        
-      <div>
-          <button onClick={this.handleClick}>Button</button>
+    return(
+    <div>
+<button onClick={this.increment}>increment</button>
+<button onClick={this.decrement}>decrement</button>
+<button onClick={this.reset}>reset</button>
+<h1> {this.state.count}</h1>
+
     </div>
     )
+    }
   }
-}
+  
 
-}
+
 
 
