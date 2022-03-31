@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import './myStyle.css';
+import { Button } from '@mui/material';
 import Menu from './Menu';
 
 export default class Ccomponent extends Component {
@@ -29,8 +30,17 @@ handleSubmit(event) {
 
   
   render() {
+    
     return(
     <div>
+      <h1 className="hello">Helllooo!</h1>
+      <Button color="secondary">Secondary</Button>
+<Button variant="contained" color="success">
+  Success
+</Button>
+<Button variant="outlined" color="error">
+  Error
+</Button>
       <form onSubmit={this.handleSubmit}>
       <input value={this.state.input} onChange={this.handleChange}/>
       <button type='submit'>Submit</button>
