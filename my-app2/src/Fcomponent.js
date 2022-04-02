@@ -4,7 +4,7 @@ export default class Fcomponent extends Component {
   constructor(props) {
       super(props);
       this.state = {
-
+        name: "Button pressed"
       }
   }
   
@@ -12,8 +12,7 @@ export default class Fcomponent extends Component {
     render() {
     return (
 <div>
-    <h1>Input</h1>
-    <input value={this.props.input} onChange={this.props.handleChange} /> 
+   <button onClick={()=>{this.props.updateData(this.state.name)}}> Button </button>
 </div>
     );
   }

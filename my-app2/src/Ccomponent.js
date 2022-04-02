@@ -1,29 +1,25 @@
 import React, { Component } from 'react'
 import Fcomponent from './Fcomponent'
-import Fncomponent from './Fncomponent'
 export default class Ccomponent extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          inputValue: ''
+          name:"button not pressed"
       };
-      this.handleChange = this.handleChange.bind(this);
+      this.updateData = this.updateData.bind(this);
   }
-  handleChange(event) {
+  updateData = (value) => {
       this.setState({
-          inputValue: event.target.value
+         name:value
       })
   }
   
     render() {
     return (
       <div>
-         
+         <p>State{this.state.name}</p>
 
-<Fcomponent input ={this.state.inputValue} 
-handleChange={this.handleChange}/>
-<Fncomponent input ={this.state.inputValue} />
-
+        <Fcomponent updateData={this.updateData} />
       </div>
     )
   }
