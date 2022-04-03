@@ -1,28 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import Ccomponent from './Ccomponent';
-import Fcomponent from './Fcomponent';
+import styled from 'styled-components';
+import Title from './Title';
+import Flex from './Flex';
+const AppWrapper = styled.div`
+width:100%;
+min-height:100vh;
+padding:2rem;
+background:black;
+color:white;
+`
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-        <Ccomponent />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper> 
+
+    <Flex justify="center">   <Title color={"green"}>Заголовок</Title>
+    </Flex>
+    
+     
+   </AppWrapper> 
   );
 }
 
